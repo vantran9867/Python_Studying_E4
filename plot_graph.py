@@ -58,7 +58,7 @@ ax1.plot(x1, y7, label='South Australia')
 ax1.plot(x1, y8, label='Tasmania')
 ax1.legend()
 
-ax2.set_title("Viet Nam's Covid-19 cases daily increase")
+ax2.set_title("Vietnam's Covid-19 cases daily increase")
 ax2.plot(x2, y, color='#444444', linestyle='--', label='Viet Nam')
 ax2.legend()
 
