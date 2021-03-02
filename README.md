@@ -1,6 +1,12 @@
 # E4_coronavirus:
-In this exercise, learner will creat a map plot which
-shows the trend of corona virus case in Australia and Viet Nam. 
-Json data was introduced in the last lesson. 
-At the moment, learner has no idea what she needs to do.
+In this exercise, the learner created a graph which
+compares the trends of daily coronavirus cases between Australia and Vietnam. 
+
+The graph was based on the daily COVID-19 cases recorded in Australia and 
+Vietnam from 22/1/2020 to 22/2/2021.
+
+In this project, the learner practiced plotting graphs on matplotlib using the 
+JSON data. The "Date" format was researched and practiced.
+
+Pipnv was installed for the project. 
 
