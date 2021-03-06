@@ -2,27 +2,26 @@ import datetime
 import json
 
 
+def open_json_file(path):
+    with open(path) as file:
+        data = json.load(file)
+    return data
+
+
 class CoronaDataService:
-    province: str
-
-    def __init__(self, data_file: str, province: str):
-        self.province = '{}'.format(province)
-        self.country_data = self.open_json_file(data_file)
-
-    def open_json_file(self, path):
-        with open(path) as file:
-            data = json.load(file)
-        return data
+    def __init__(self, data_file: str):
+        self.country_data = open_json_file(data_file)
 
     def get_total_cases_in_country(self, country) -> int:
         total_cases = 0
-        for record in CoronaDataService.open_json_file(self):
-            total_cases += record['Cases']
+        for record in self.country_data:
+            if record['Country'] == self.country:
+                total_cases += record['Cases']
         return total_cases
 
-    def get_total_cases_in_province(self, country_data: str, province: str) -> int:
+    def get_total_cases_in_province(self, province: str) -> int:
         total_cases = 0
-        for record in CoronaDataService.open_json_file(self):
+        for record in self.country_data:
             if record['Province'] == self.province:
                 total_cases += record['Cases']
         return total_cases
