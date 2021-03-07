@@ -34,6 +34,13 @@ class CoronaDataService:
                 cases_list.append(record['Cases'])
         return cases_list
 
+    def get_record_of_province(self, province: str) -> list:
+        records = []
+        for record in self.country_data:
+            if record['Province'] == province:
+                records.append(record)
+        return records
+
     def date_list(self) -> list:
         date_list = []
         for record in self.country_data:
